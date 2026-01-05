@@ -44,10 +44,10 @@ function App() {
             <InputBox
               label="From"
               amount={amount}
-              currencyOptions={options}
-              onCurrencyChange={(currency) => setFrom(currency)}
-              selectCurrency={from}
               onAmountChange={(amount) => setAmount(amount)}
+              onCurrencyChange={(currency) => setFrom(currency)}
+              currencyOptions={options}
+              selectCurrency={from}
             />
 
             <div className="flex justify-center">
@@ -63,10 +63,10 @@ function App() {
             <InputBox
               label="To"
               amount={convertedAmount}
-              currencyOptions={options}
               onCurrencyChange={(currency) => setTo(currency)}
+              currencyOptions={options}
               selectCurrency={to}
-              amountDisable
+              amountDisable={true}
             />
 
             <button

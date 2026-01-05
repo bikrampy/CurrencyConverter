@@ -1,4 +1,4 @@
-import React, { useId } from "react";
+import { useId } from "react";
 
 function InputBox({
   label,
@@ -12,12 +12,10 @@ function InputBox({
   className = "",
 }) {
   const amountInputId = useId();
-
   return (
     <div
       className={`flex items-center justify-between gap-4 rounded-2xl bg-white/70 backdrop-blur-md border border-white/40 p-4 shadow-md ${className}`}
     >
-      {/* Amount Section */}
       <div className="flex flex-col w-1/2">
         <label
           htmlFor={amountInputId}
@@ -37,8 +35,6 @@ function InputBox({
           className="w-full rounded-lg bg-transparent text-gray-900 placeholder-gray-400 outline-none py-2 px-2 border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 disabled:opacity-50"
         />
       </div>
-
-      {/* Currency Section */}
       <div className="flex flex-col w-1/2 items-end">
         <span className="text-xs font-medium text-gray-600 mb-1">
           Currency
